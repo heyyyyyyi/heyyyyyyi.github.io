@@ -30,5 +30,36 @@ docker buildx create --use
 # Build and push multi-arch image
 docker buildx build --platform linux/amd64,linux/arm64 -t your-repo/agent-runtime:v1.0.1 --push .
 ```
+### Docker Basics for Agent Engineers
+
+Docker provides a simple and isolated environment for running programs. It uses **containers**, which are lightweight, standalone units that package an application along with its dependencies. To run a container, you need:
+
+1. **Docker Image**: A blueprint containing everything required to execute the application.
+2. **Compose File**: A configuration file (`docker-compose.yml`) that defines how to run one or more containers.
+
+#### Key Docker Components:
+- **Dockerfile**: A script with instructions on how to build a Docker image.
+- **Docker Hub**: A platform for sharing and downloading images. Alternatively, GitHub can also serve as an image registry.
+
+#### Common Docker Commands:
+Here are some frequently used commands in the Docker container lifecycle:
+
+```bash
+# Start containers as defined in the compose file
+docker compose up
+
+# Stop and remove containers
+docker compose down
+
+# Build a Docker image from a Dockerfile
+docker build -t your-repo/your-image:tag .
+
+# Push an image to a registry
+docker push your-repo/your-image:tag
+```
+
+These tools and commands form the foundation for managing Docker-based environments, making it easier to develop, test, and deploy agent systems.
+
 ### 2. Debugging on Docker
 Since rebuilding images for every minor code change is time-consuming, we have adopted several strategies to debug the agent runtime efficiently.
+
