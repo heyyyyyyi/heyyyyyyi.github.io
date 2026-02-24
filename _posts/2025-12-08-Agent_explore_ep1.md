@@ -2,6 +2,7 @@
 layout: post
 title: Agents System Development Travel
 date: 2025-12-08 00:10 -0400
+lang: en
 ---
 Recently, following a surge in traffic on our agent system, we encountered frequent stability issues. This post reflects on those challenges and the specific tooling strategies we adopted to solve them effectively.
 

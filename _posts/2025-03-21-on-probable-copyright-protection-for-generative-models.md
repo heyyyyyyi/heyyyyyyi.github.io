@@ -2,6 +2,7 @@
 layout: post
 title: On Probable Copyright Protection for Generative Models
 date: 2025-03-21 00:10 -0400
+lang: en
 ---
 # Paper Digest: On Probable Copyright Protection for Generative Models
 

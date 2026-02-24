@@ -2,6 +2,7 @@
 layout: post
 title: "Architecting Multi-Agent Systems: Challenges and Key Components"
 date: 2025-12-16 00:10 -0400
+lang: en
 categories: [AI, Software Architecture, LLM]
 tags: [Multi-Agent, Docker, System Design]
 ---

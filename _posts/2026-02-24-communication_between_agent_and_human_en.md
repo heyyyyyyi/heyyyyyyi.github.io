@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A New Human-Agent Paradigm: Collaboration and Boundary Design in Software Engineering
+title: "A New Human-Agent Paradigm: Collaboration and Boundary Design in Software Engineering"
 date: 2026-02-24 00:10 -0400
 lang: en
 ref: communication-between-agent-and-human

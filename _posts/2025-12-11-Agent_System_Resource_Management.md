@@ -2,6 +2,7 @@
 layout: post
 title: Optimizing Resource Management in Agent Systems
 date: 2025-12-11 00:10 -0400
+lang: en
 ---
 
 In an agent hosting platform, where tasks typically have long lifecycles, efficient resource management is critical. The primary resources involved are the LLM (whether self-hosted or via API) and the underlying compute infrastructure (GPU, CPU, Storage, and Memory).

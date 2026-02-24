@@ -2,6 +2,7 @@
 layout: post
 title: "Agent Planning Strategies: From Task Trackers to Dedicated Plan Agents"
 date: 2025-12-19 00:10 -0400
+lang: en
 categories: [AI, Software Architecture, LLM]
 tags: [Agent, Planning, Multi-Agent Systems]
 ---
