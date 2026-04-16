@@ -6,7 +6,8 @@ lang: zh
 ref: communication-between-agent-and-human
 slug: communication-between-agent-and-human
 permalink: /zh/posts/communication-between-agent-and-human/
-tags: [Agent, Huam-AI Collaboration, Agentic Workflow]
+categories: [AI, Agent Systems, Collaboration]
+tags: [Agent, Human-AI Collaboration, Agentic Workflow]
 ---
 
 > 🌐 语言 / Language: [中文](/zh/posts/communication-between-agent-and-human/) | [English](/en/posts/communication-between-agent-and-human/)

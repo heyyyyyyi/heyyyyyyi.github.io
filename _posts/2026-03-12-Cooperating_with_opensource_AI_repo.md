@@ -6,6 +6,7 @@ lang: zh
 ref: cooperating-with-opensource-ai-repo
 slug: cooperating-with-opensource-ai-repo
 permalink: /zh/posts/cooperating-with-opensource-ai-repo/
+categories: [AI, Agent Systems, Architecture]
 tags: [Agent, Open Source, Architecture]
 ---
 

@@ -6,6 +6,7 @@ lang: zh
 ref: private-skill-knowledge
 slug: private-skill-knowledge
 permalink: /zh/posts/private-skill-knowledge/
+categories: [AI, Agent Systems, Industrial AI]
 tags: [Agent, Private Skills, Industrial AI]
 ---
 

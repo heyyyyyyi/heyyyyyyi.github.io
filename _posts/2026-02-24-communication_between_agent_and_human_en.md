@@ -6,6 +6,7 @@ lang: en
 ref: communication-between-agent-and-human
 slug: communication-between-agent-and-human
 permalink: /en/posts/communication-between-agent-and-human/
+categories: [AI, Agent Systems, Collaboration]
 tags: [Agent, Human-AI Collaboration, Agentic Workflow]
 ---
 

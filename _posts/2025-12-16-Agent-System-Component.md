@@ -3,9 +3,9 @@ layout: post
 title: "Architecting Multi-Agent Systems: Challenges and Key Components"
 date: 2025-12-16 00:10 -0400
 lang: en
-categories: [AI, Software Architecture, LLM]
-tags: [Multi-Agent, Docker, System Design]
----
+categories: [AI, Agent Systems, Architecture]
+tags: [Multi-Agent, Docker, System Design, LLM]
+--- 
 
 Recently, research into **Multi-Agent Systems** has exploded. Below is a synthesis of insights from recent industry reports and my own hands-on experience deploying agentic components in production environments.
 

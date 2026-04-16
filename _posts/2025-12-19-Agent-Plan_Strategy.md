@@ -3,8 +3,8 @@ layout: post
 title: "Agent Planning Strategies: From Task Trackers to Dedicated Plan Agents"
 date: 2025-12-19 00:10 -0400
 lang: en
-categories: [AI, Software Architecture, LLM]
-tags: [Agent, Planning, Multi-Agent Systems]
+categories: [AI, Agent Systems, Planning]
+tags: [Agent, Planning, Multi-Agent Systems, Workflow]
 ---
 
 As task complexity increases, the context window grows longer and longer, often causing agents to "get lost in the middle" and miss the ultimate directive. To mitigate this, various strategies have emerged to provide agents with better guidance on subtasks.
