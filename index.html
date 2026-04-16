@@ -1,4 +1,161 @@
 ---
-layout: home
-# Index page
+layout: page
+permalink: /
 ---
+
+{% assign recent_posts = site.posts | sort: "date" | reverse | slice: 0, 4 %}
+{% assign essay_posts = site.posts | where_exp: "post", "post.categories contains 'Essay' or post.categories contains 'Cosmology' or post.categories contains 'History'" | sort: "date" | reverse | slice: 0, 3 %}
+{% assign observatory_ready = false %}
+{% if site.analytics.umami.id or site.analytics.cloudflare.id or site.pageviews.provider %}
+  {% assign observatory_ready = true %}
+{% endif %}
+
+<div class="landing-space-home">
+  <section class="space-hero" data-space-hero>
+    <canvas class="space-particle-layer" data-space-particles aria-hidden="true"></canvas>
+
+    <div class="hero-panel">
+      <div class="hero-copy">
+        <span class="landing-kicker">Orbital Log / Personal Research Station</span>
+        <h1 class="hero-title">Building <strong>Agent Systems</strong> With A Space-Age Skin</h1>
+        <p class="hero-lead">
+          这里现在不只是一个普通博客。我把它往更像 mission control 的方向推进：有太空感的大画面、带一点 punk 的信号噪声、研究记录、系统构建笔记，以及以后会继续扩展的宇宙学与历史随笔。
+        </p>
+        <div class="hero-actions">
+          <a class="space-button space-button-primary" href="{{ '/essays/' | relative_url }}">进入 Essays / 随笔</a>
+          <a class="space-button" href="{{ '/observatory/' | relative_url }}">查看 Observatory</a>
+        </div>
+        <div class="hero-signal-strip">
+          <span class="signal-chip">NASA Mood</span>
+          <span class="signal-chip">Punk Interfaces</span>
+          <span class="signal-chip">Particle Layer</span>
+          <span class="signal-chip">Bilingual Writing</span>
+        </div>
+      </div>
+      <div class="hero-orbit-cluster" aria-hidden="true">
+        <span></span>
+      </div>
+      <div class="hero-orbit-node" aria-hidden="true"></div>
+    </div>
+
+    <aside class="signal-panel">
+      <h2 class="signal-heading">Mission Signals</h2>
+      <p class="signal-subtitle">研究主线之外，也保留更多跨学科观察的入口。</p>
+      <div class="signal-stack">
+        <div class="mission-stat">
+          <div class="mission-stat-label">Primary Track</div>
+          <div class="mission-stat-value">Agent Systems</div>
+          <div class="mission-stat-copy">系统设计、运行时、context、memory、agent workflow engineering。</div>
+        </div>
+        <div class="mission-stat">
+          <div class="mission-stat-label">Secondary Track</div>
+          <div class="mission-stat-value">Essays</div>
+          <div class="mission-stat-copy">宇宙学、历史、杂感和更慢一点的思考，会统一沉淀到新栏目。</div>
+        </div>
+        <div class="mission-stat">
+          <div class="mission-stat-label">Telemetry</div>
+          <div class="mission-stat-value">Observatory</div>
+          <div class="mission-stat-copy">访问统计预留了地区来源展示位，适合接 Umami 或 Cloudflare。</div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="space-sections">
+    <div class="section-grid">
+      <section class="observatory-panel">
+        <span class="section-kicker">Observatory</span>
+        <h2 class="section-title">Visitor Telemetry</h2>
+        <p class="section-copy">
+          页面访问统计和地区来源已经预留好接入口。对于 GitHub Pages 这类静态站，推荐使用 Umami 看国家/地区来源，用 Cloudflare 看总体流量趋势。
+        </p>
+        {% if observatory_ready %}
+          <div class="obs-status obs-status-live">Analytics Config Detected</div>
+        {% else %}
+          <div class="obs-status obs-status-pending">Analytics Pending Setup</div>
+        {% endif %}
+        <ul class="section-list">
+          <li>支持按页面统计访问量。</li>
+          <li>支持查看主要访问国家/地区。</li>
+          <li>单独做了一个 Observatory 页面放展示说明和后续嵌入位。</li>
+        </ul>
+      </section>
+
+      <section class="essay-panel">
+        <span class="section-kicker">Essays</span>
+        <h2 class="section-title">A Second Orbit</h2>
+        <p class="section-copy">
+          我把 AI 主线和更个人、更漫游式的随笔拆成了两个轨道。以后宇宙学、历史、文化观察都可以直接挂到这个栏目，不会打乱当前技术博客的节奏。
+        </p>
+        <ul class="section-list">
+          <li>建议新随笔文章使用 `categories: [Essay]`。</li>
+          <li>宇宙学可用 `categories: [Essay, Cosmology]`。</li>
+          <li>历史类可用 `categories: [Essay, History]`。</li>
+        </ul>
+      </section>
+
+      <section class="essay-panel">
+        <span class="section-kicker">Style Direction</span>
+        <h2 class="section-title">Space Punk Surface</h2>
+        <p class="section-copy">
+          这次视觉不是简单换颜色，而是加了一层轨道、栅格、舷窗和粒子感，让首页看起来更像一个研究站控制面板。
+        </p>
+        <div class="mission-callout">
+          如果你后面还想继续加“大幅插画”，下一步最自然的是补一张首页 header artwork 或一组文章封面图。
+        </div>
+      </section>
+    </div>
+
+    <section class="post-radar">
+      <span class="section-kicker">Recent Transmissions</span>
+      <h2 class="section-title">Latest Posts</h2>
+      <p class="section-subtitle">当前最新的技术与研究记录。</p>
+      <div class="post-radar-grid">
+        {% for post in recent_posts %}
+          <article class="post-radar-card">
+            <a href="{{ post.url | relative_url }}">
+              <h3 class="post-radar-title">{{ post.title }}</h3>
+              <p class="post-radar-meta">
+                {{ post.date | date: "%Y-%m-%d" }}
+                {% if post.lang %} · {{ post.lang | upcase }}{% endif %}
+              </p>
+              <p class="post-radar-excerpt">
+                {{ post.excerpt | strip_html | truncate: 150 }}
+              </p>
+              {% if post.tags %}
+                <div class="post-radar-tags">
+                  {% for tag in post.tags limit: 3 %}
+                    <span class="post-radar-tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="post-radar">
+      <span class="section-kicker">Essay Feed</span>
+      <h2 class="section-title">Cosmology / History / Notes</h2>
+      <p class="section-subtitle">这里显示被归类到 `Essay`、`Cosmology` 或 `History` 的文章。</p>
+      {% if essay_posts.size > 0 %}
+        <div class="post-radar-grid">
+          {% for post in essay_posts %}
+            <article class="post-radar-card">
+              <a href="{{ post.url | relative_url }}">
+                <h3 class="post-radar-title">{{ post.title }}</h3>
+                <p class="post-radar-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+                <p class="post-radar-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="empty-state">
+          这个轨道已经准备好了，但你还没有放入随笔文章。之后只要给文章加上 `categories: [Essay]` 或更细的 `Cosmology` / `History` 分类，它就会自动出现在这里和新 tab 里。
+        </div>
+      {% endif %}
+    </section>
+  </section>
+</div>
