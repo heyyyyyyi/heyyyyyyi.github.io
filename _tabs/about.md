@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 6
+order: 5
 ---
 
 # Welcome to My Personal Website
@@ -19,4 +19,3 @@ This site is a space to share my projects, research notes, and ongoing thoughts.
 
 ## Let's Connect 
 Feel free to reach out if you’d like to connect or collaborate.
-

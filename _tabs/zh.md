@@ -2,7 +2,7 @@
 layout: page
 title: 中文
 icon: fas fa-language
-order: 8
+order: 7
 ---
 
 ## 中文文章

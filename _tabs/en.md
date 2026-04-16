@@ -2,7 +2,7 @@
 layout: page
 title: English
 icon: fas fa-language
-order: 7
+order: 6
 ---
 
 ## English Posts

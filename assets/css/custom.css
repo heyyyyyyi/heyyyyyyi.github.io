@@ -67,16 +67,14 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
 .space-hero {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.95fr);
-  gap: 1.25rem;
+  display: block;
   padding: 1.5rem 0 1rem;
 }
 
 .hero-panel {
   overflow: hidden;
   padding: clamp(1.6rem, 3vw, 2.75rem);
-  min-height: 29rem;
+  min-height: 22rem;
   background:
     linear-gradient(180deg, rgba(7, 17, 31, 0.84), rgba(7, 17, 31, 0.96)),
     linear-gradient(120deg, rgba(255, 109, 90, 0.08), rgba(131, 246, 255, 0.04));
@@ -112,7 +110,7 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 42rem;
+  max-width: 34rem;
 }
 
 .landing-kicker {
@@ -137,9 +135,8 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
 .hero-title {
   margin: 0;
   font-size: clamp(2.5rem, 5vw, 4.8rem);
-  line-height: 0.98;
+  line-height: 1.02;
   color: var(--space-text);
-  text-transform: uppercase;
 }
 
 .hero-title strong {
@@ -254,13 +251,6 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
   box-shadow: 0 0 16px rgba(255, 184, 108, 0.6);
 }
 
-.signal-panel {
-  padding: 1.2rem;
-  background:
-    linear-gradient(180deg, rgba(8, 19, 35, 0.92), rgba(4, 10, 22, 0.96)),
-    linear-gradient(140deg, rgba(255, 109, 90, 0.08), transparent 38%);
-}
-
 .signal-heading,
 .section-title,
 .post-radar-title {
@@ -269,45 +259,10 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
   text-transform: uppercase;
 }
 
-.signal-heading {
-  font-size: 1rem;
-}
-
 .signal-subtitle,
 .section-subtitle,
 .post-radar-meta {
   color: var(--space-muted);
-}
-
-.signal-stack {
-  display: grid;
-  gap: 0.9rem;
-  margin-top: 1rem;
-}
-
-.mission-stat {
-  padding: 1rem;
-  border: 1px solid rgba(131, 246, 255, 0.12);
-  border-radius: 1.2rem;
-  background: rgba(255, 255, 255, 0.025);
-}
-
-.mission-stat-label {
-  font-size: 0.76rem;
-  text-transform: uppercase;
-  color: var(--space-muted);
-}
-
-.mission-stat-value {
-  margin-top: 0.45rem;
-  font-size: 1.7rem;
-  color: var(--space-text);
-}
-
-.mission-stat-copy {
-  margin-top: 0.35rem;
-  color: var(--space-muted);
-  line-height: 1.65;
 }
 
 .space-particle-layer {
@@ -323,12 +278,6 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
   display: grid;
   gap: 1rem;
   margin-top: 0.5rem;
-}
-
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
 }
 
 .observatory-panel,
@@ -419,56 +368,7 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
   text-transform: uppercase;
 }
 
-.empty-state {
-  margin-top: 0.8rem;
-  padding: 1rem 1.1rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--space-muted);
-}
-
-.mission-callout {
-  margin-top: 1rem;
-  padding: 1rem 1.2rem;
-  border-left: 3px solid var(--space-gold);
-  border-radius: 0.9rem;
-  background: rgba(255, 184, 108, 0.06);
-  color: var(--space-text);
-}
-
-.obs-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-top: 0.75rem;
-  padding: 0.55rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: var(--space-text);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.obs-status::before {
-  content: "";
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-}
-
-.obs-status-live::before {
-  background: #62ffa1;
-  box-shadow: 0 0 14px rgba(98, 255, 161, 0.72);
-}
-
-.obs-status-pending::before {
-  background: var(--space-red);
-  box-shadow: 0 0 14px rgba(255, 109, 90, 0.72);
-}
-
 @media (max-width: 991px) {
-  .space-hero,
-  .section-grid,
   .post-radar-grid {
     grid-template-columns: 1fr;
   }
