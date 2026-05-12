@@ -459,3 +459,86 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
     width: 100%;
   }
 }
+
+/* ===== Minimal Home ===== */
+
+.minimal-home {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.minimal-intro {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--space-line, rgba(120, 214, 255, 0.16));
+}
+
+.minimal-name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--space-text, #e8f4ff);
+  letter-spacing: -0.02em;
+}
+
+.minimal-bio {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: var(--space-muted, #9fb7d0);
+  line-height: 1.6;
+}
+
+.minimal-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.minimal-post {
+  padding: 0.25rem 0;
+}
+
+.minimal-link {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.35rem 0.2rem;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 160ms ease;
+}
+
+.minimal-link:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.minimal-date {
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  color: var(--space-muted, #9fb7d0);
+  font-variant-numeric: tabular-nums;
+  min-width: 6rem;
+}
+
+.minimal-title {
+  font-size: 0.95rem;
+  color: var(--space-text, #e8f4ff);
+  line-height: 1.5;
+}
+
+@media (max-width: 540px) {
+  .minimal-home {
+    padding: 2rem 1rem;
+  }
+
+  .minimal-link {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .minimal-date {
+    min-width: auto;
+    font-size: 0.75rem;
+  }
+}
