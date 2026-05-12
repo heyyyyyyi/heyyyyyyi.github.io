@@ -3,7 +3,9 @@ layout: page
 permalink: /
 ---
 
-{% assign archive_posts = site.posts | sort: "date" | reverse %}
+{% assign en_posts = site.posts | where: "lang", "en" | sort: "date" | reverse %}
+{% assign zh_posts = site.posts | where: "lang", "zh" | sort: "date" | reverse %}
+
 <div class="minimal-home">
   <header class="minimal-intro">
     <p class="minimal-bio">
@@ -14,17 +16,51 @@ permalink: /
       我们曾受限于人与人之间缓慢而短暂的交流。<br>
       AI 或许是人类通往星辰大海的第一座桥梁。
     </p>
+
+    <div class="lang-toggle" role="tablist">
+      <button class="lang-btn is-active" data-lang="en" role="tab" aria-selected="true">EN</button>
+      <button class="lang-btn" data-lang="zh" role="tab" aria-selected="false">中文</button>
+    </div>
   </header>
 
-  <section class="minimal-posts">
-        {% for post in archive_posts %}
+  <section class="minimal-posts" data-posts="en">
+    {% for post in en_posts %}
       <article class="minimal-post">
         <a class="minimal-link" href="{{ post.url | relative_url }}">
           <span class="minimal-date">{{ post.date | date: "%Y-%m-%d" }}</span>
           <span class="minimal-title">{{ post.title }}</span>
-            </a>
-          </article>
-        {% endfor %}
-    </section>
-        </div>
+        </a>
+      </article>
+    {% endfor %}
+  </section>
 
+  <section class="minimal-posts is-hidden" data-posts="zh">
+    {% for post in zh_posts %}
+      <article class="minimal-post">
+        <a class="minimal-link" href="{{ post.url | relative_url }}">
+          <span class="minimal-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <span class="minimal-title">{{ post.title }}</span>
+        </a>
+      </article>
+    {% endfor %}
+  </section>
+</div>
+
+<script>
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+
+      document.querySelectorAll('[data-posts]').forEach(section => {
+        section.classList.toggle('is-hidden', section.dataset.posts !== lang);
+      });
+    });
+  });
+</script>
