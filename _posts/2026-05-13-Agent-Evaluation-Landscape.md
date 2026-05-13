@@ -1,3 +1,17 @@
+---
+layout: post
+title: 大模型评测全景：从基座跑分到 Agent 全链路，我们到底在测什么？
+date: 2026-05-13 00:10 -0400
+lang: zh
+ref: agent-evaluation-landscape
+slug: agent-evaluation-landscape
+permalink: /zh/posts/agent-evaluation-landscape/
+categories: [AI, Agent Systems, Evaluation, Benchmark]
+tags: [Agent Evaluation, Benchmark, LLM, QwenClawBench]
+---
+
+> 🌐 语言 / Language: [中文](/zh/posts/agent-evaluation-landscape/) | [English](/en/posts/agent-evaluation-landscape/)
+
 # 大模型评测全景：从基座跑分到 Agent 全链路，我们到底在测什么？
 
 > 2026 年，大模型评测已经从"一张卷子定生死"进化成了一个复杂的系统工程。本文尝试从基座能力到 Agent 全链路，梳理当前评测体系的主要维度、关键 benchmark，并以 QwenClawBench 为例，深入拆解 Agent 评测的工程实现逻辑。
