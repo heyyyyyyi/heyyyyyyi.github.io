@@ -657,6 +657,65 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
   }
 }
 
+/* ===== Reading list (reading page) ===== */
+
+.reading-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reading-item {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--minimal-line, rgba(120, 214, 255, 0.1));
+}
+
+.reading-item:last-child {
+  border-bottom: none;
+}
+
+.reading-link {
+  display: block;
+  color: var(--minimal-text, #e8f4ff);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: opacity 160ms ease;
+}
+
+.reading-link:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.reading-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  color: var(--minimal-muted, #9fb7d0);
+}
+
+.reading-type {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--minimal-line, rgba(120, 214, 255, 0.2));
+  border-radius: 999px;
+}
+
+.reading-source {
+  color: var(--minimal-muted, #9fb7d0);
+  text-decoration: none;
+}
+
+.reading-source:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
 @media (max-width: 540px) {
   .minimal-home {
     padding: 4rem 1.25rem 2rem;
