@@ -716,6 +716,21 @@ h1, h2, h3, .landing-kicker, .signal-chip, .mission-stat-value {
   text-decoration: none;
 }
 
+.reading-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.reading-label {
+  font-size: 0.72rem;
+  color: var(--minimal-muted, #9fb7d0);
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--minimal-line, rgba(120, 214, 255, 0.16));
+  border-radius: 999px;
+}
+
 @media (max-width: 540px) {
   .minimal-home {
     padding: 4rem 1.25rem 2rem;

@@ -20,6 +20,11 @@ title: Reading
             {% if note.source_type %}<span class="reading-type">{{ note.source_type }}</span>{% endif %}
             {% if note.source %}<a class="reading-source" href="{{ note.source }}" target="_blank" rel="noopener">source ↗</a>{% endif %}
           </div>
+          {% if note.labels %}
+            <div class="reading-labels">
+              {% for label in note.labels %}<span class="reading-label">{{ label }}</span>{% endfor %}
+            </div>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
@@ -36,6 +41,11 @@ title: Reading
             {% if note.source_type %}<span class="reading-type">{{ note.source_type }}</span>{% endif %}
             {% if note.source %}<a class="reading-source" href="{{ note.source }}" target="_blank" rel="noopener">原文 ↗</a>{% endif %}
           </div>
+          {% if note.labels %}
+            <div class="reading-labels">
+              {% for label in note.labels %}<span class="reading-label">{{ label }}</span>{% endfor %}
+            </div>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
